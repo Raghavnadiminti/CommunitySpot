@@ -1,0 +1,110 @@
+#form {
+  width: 80vw;
+  max-width: 400px; 
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -20%);
+  padding: 20px;
+  margin: 0;
+  border: #6661fb 5px solid;
+  background-color: white;
+  
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.incls {
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.low {
+  animation: Low 5s forwards;
+  margin-bottom: 10px;
+}
+
+.high {
+  animation: high 5s forwards;
+  margin-bottom: 10px;
+}
+
+.medium {
+  animation: mediu 5s forwards;
+  margin-bottom: 10px;
+}
+
+.signinbtn {
+  margin-top: 10px;
+  background-color: #6661fb;
+  border: white 2px solid;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signinbtn:hover {
+  background-color: #5550e0;
+}
+
+@keyframes Low {
+  from {
+      width: 1px;
+      height: 1px;
+  }
+  to {
+      width: 80px;
+      height: 2px;
+      background-color: red;
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  #form {
+      width: 90vw;
+      padding: 15px;
+      border-width: 3px; /* Slightly reduce border thickness */
+  }
+
+  .incls {
+      margin-right: 10px;
+      margin-bottom: 15px;
+  }
+
+  .signinbtn {
+      padding: 8px;
+      font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  #form {
+      width: 95vw;
+      max-width: 350px; /* Keeps the form manageable on smaller screens */
+      padding: 10px;
+      border-width: 2px; /* Thinner border for smaller screens */
+  }
+
+  .incls {
+      margin-right: 5px;
+      margin-bottom: 10px;
+  }
+
+  .signinbtn {
+      padding: 6px;
+      font-size: 0.8em;
+  }
+
+  .low, .high, .medium {
+      animation-duration: 3s; /* Speed up animations for smaller screens */
+  }
+}
